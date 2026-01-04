@@ -26,7 +26,7 @@
     <style>
         html { scroll-behavior: smooth; }
         .hero-bg {
-            background-image: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.8)), url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-image: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.8)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
             background-size: cover;
             background-position: center;
         }
@@ -36,6 +36,15 @@
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
+        }
+        .img-gradient {
+            position: relative;
+        }
+        .img-gradient::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(15, 23, 42, 0.8), transparent);
         }
     </style>
 </head>
@@ -124,34 +133,43 @@
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
                 <!-- Card 1 -->
-                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-xl transition duration-300 group">
-                    <div class="w-14 h-14 bg-white rounded-xl shadow-md flex items-center justify-center text-2xl text-secondary mb-6 group-hover:bg-secondary group-hover:text-white transition">
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-xl transition duration-300 group overflow-hidden relative">
+                    <div class="absolute -right-4 -bottom-4 text-slate-200 opacity-20 text-8xl">
                         <i class="fa-solid fa-handshake"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-primary mb-3">검증된 전문가 풀(Pool) 구축</h3>
-                    <p class="text-slate-600 leading-relaxed">
+                    <div class="w-14 h-14 bg-white rounded-xl shadow-md flex items-center justify-center text-2xl text-secondary mb-6 group-hover:bg-secondary group-hover:text-white transition relative z-10">
+                        <i class="fa-solid fa-handshake"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3 relative z-10">검증된 전문가 풀(Pool) 구축</h3>
+                    <p class="text-slate-600 leading-relaxed relative z-10">
                         스타트업들은 항상 좋은 파트너 전문직을 찾습니다. 마케팅을 통해 실력이 검증된 전문가를 파트너로 영입하여 우리 보육 기업들에게 최우선으로 연결합니다.
                     </p>
                 </div>
 
                 <!-- Card 2 -->
-                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-xl transition duration-300 group">
-                    <div class="w-14 h-14 bg-white rounded-xl shadow-md flex items-center justify-center text-2xl text-secondary mb-6 group-hover:bg-secondary group-hover:text-white transition">
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-xl transition duration-300 group overflow-hidden relative">
+                    <div class="absolute -right-4 -bottom-4 text-slate-200 opacity-20 text-8xl">
                         <i class="fa-solid fa-chart-line"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-primary mb-3">지속 가능한 동반 성장</h3>
-                    <p class="text-slate-600 leading-relaxed">
+                    <div class="w-14 h-14 bg-white rounded-xl shadow-md flex items-center justify-center text-2xl text-secondary mb-6 group-hover:bg-secondary group-hover:text-white transition relative z-10">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3 relative z-10">지속 가능한 동반 성장</h3>
+                    <p class="text-slate-600 leading-relaxed relative z-10">
                         AC도 자생력이 필요합니다. 마케팅 에이전시를 통해 확보한 수익은 다시 스타트업 발굴을 위한 세미나 개최와 초기 투자금으로 재투자되는 선순환 구조입니다.
                     </p>
                 </div>
 
                 <!-- Card 3 -->
-                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-xl transition duration-300 group">
-                    <div class="w-14 h-14 bg-white rounded-xl shadow-md flex items-center justify-center text-2xl text-secondary mb-6 group-hover:bg-secondary group-hover:text-white transition">
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-xl transition duration-300 group overflow-hidden relative">
+                    <div class="absolute -right-4 -bottom-4 text-slate-200 opacity-20 text-8xl">
                         <i class="fa-solid fa-users-viewfinder"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-primary mb-3">가장 강력한 딜 소싱(Deal Sourcing)</h3>
-                    <p class="text-slate-600 leading-relaxed">
+                    <div class="w-14 h-14 bg-white rounded-xl shadow-md flex items-center justify-center text-2xl text-secondary mb-6 group-hover:bg-secondary group-hover:text-white transition relative z-10">
+                        <i class="fa-solid fa-users-viewfinder"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3 relative z-10">가장 강력한 딜 소싱(Deal Sourcing)</h3>
+                    <p class="text-slate-600 leading-relaxed relative z-10">
                         전문가님을 내세워 '세미나'를 여는 것은 단순 행사가 아닙니다. 도움이 필요한 초기 창업자들을 모으고, 그들을 네스토리움 생태계로 끌어들이는 가장 강력한 영업입니다.
                     </p>
                 </div>
@@ -174,16 +192,16 @@
                 </p>
             </div>
 
-            <div class="space-y-12">
+            <div class="space-y-24">
                 <!-- Feature 1 -->
-                <div class="flex flex-col md:flex-row items-center gap-10">
+                <div class="flex flex-col md:flex-row items-center gap-12">
                     <div class="md:w-1/2 order-2 md:order-1">
-                        <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700 shadow-2xl">
+                        <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700 shadow-2xl relative overflow-hidden">
                             <div class="flex items-center gap-4 mb-6">
                                 <div class="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center text-xl font-bold text-white">01</div>
                                 <h3 class="text-2xl font-bold">365일 매일 발행되는<br>압도적 블로그 점유율</h3>
                             </div>
-                            <p class="text-slate-300 mb-6">
+                            <p class="text-slate-300 mb-6 leading-relaxed">
                                 경쟁사들이 주 2~3회 올릴 때, 저희는 <strong>자동화 시스템을 통해 매일 발행</strong>합니다. 
                                 검색했을 때 대표님 성함과 사무실이 도배되도록 지역 키워드를 완벽하게 장악합니다.
                             </p>
@@ -193,18 +211,19 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="md:w-1/2 order-1 md:order-2 text-center md:text-left">
-                        <i class="fa-brands fa-blogger text-9xl text-slate-800 opacity-50 absolute -z-10 transform translate-x-10"></i>
-                        <h4 class="text-3xl font-bold mb-4">"검색하면 무조건 나오게 해드립니다"</h4>
-                        <p class="text-slate-400">단순 배포가 아닌 브랜딩이 담긴 콘텐츠로 신뢰도를 높입니다.</p>
+                    <div class="md:w-1/2 order-1 md:order-2">
+                        <div class="rounded-2xl overflow-hidden shadow-2xl transform md:rotate-2 hover:rotate-0 transition duration-500">
+                            <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" alt="블로그 마케팅 이미지" class="w-full h-80 object-cover">
+                        </div>
                     </div>
                 </div>
 
                 <!-- Feature 2 -->
-                <div class="flex flex-col md:flex-row items-center gap-10">
-                    <div class="md:w-1/2 text-center md:text-right">
-                        <h4 class="text-3xl font-bold mb-4">"한 달 2시간 촬영으로,<br>한 달 치 영상이 쏟아집니다"</h4>
-                        <p class="text-slate-400">롱폼 1개, 숏폼 8개. 하나의 소스로 모든 채널을 커버하는 OSMU 시스템.</p>
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/2">
+                        <div class="rounded-2xl overflow-hidden shadow-2xl transform md:-rotate-2 hover:rotate-0 transition duration-500">
+                            <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" alt="유튜브 촬영 이미지" class="w-full h-80 object-cover">
+                        </div>
                     </div>
                     <div class="md:w-1/2">
                         <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700 shadow-2xl">
@@ -212,7 +231,7 @@
                                 <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center text-xl font-bold text-white">02</div>
                                 <h3 class="text-2xl font-bold">유튜브 & 숏폼<br>원소스 멀티유즈 (OSMU)</h3>
                             </div>
-                            <p class="text-slate-300 mb-6">
+                            <p class="text-slate-300 mb-6 leading-relaxed">
                                 유튜브 해야 하는 건 알지만 시간이 없으시죠?
                                 <strong>한 달에 딱 1번, 강남 스튜디오로 2시간만 나오세요.</strong>
                                 대본, 촬영, 편집, 썸네일, 숏폼 가공까지 저희 전담 팀이 알아서 다 해드립니다.
@@ -226,14 +245,14 @@
                 </div>
 
                 <!-- Feature 3 -->
-                <div class="flex flex-col md:flex-row items-center gap-10">
+                <div class="flex flex-col md:flex-row items-center gap-12">
                     <div class="md:w-1/2 order-2 md:order-1">
                         <div class="bg-gradient-to-br from-secondary to-amber-700 p-8 rounded-2xl shadow-2xl text-white transform hover:scale-105 transition duration-300">
                             <div class="flex items-center gap-4 mb-6">
                                 <div class="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center text-xl font-bold text-white">03</div>
                                 <h3 class="text-2xl font-bold">오프라인 세미나 개최 &<br>DB 독점 제공</h3>
                             </div>
-                            <p class="text-white/90 mb-6 font-medium text-lg">
+                            <p class="text-white/90 mb-6 font-medium text-lg leading-relaxed">
                                 이것이 네스토리움의 핵심입니다.
                                 <strong>실제 수임이 필요한 스타트업 대표들을 강남 세미나실로 모객</strong>해 드립니다.
                                 대표님은 무대에서 전문가로서 빛나기만 하세요.
@@ -244,9 +263,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="md:w-1/2 order-1 md:order-2 text-center md:text-left">
-                        <h4 class="text-3xl font-bold mb-4">"노출이 아닌<br>진짜 <span class="text-secondary">매출</span>을 드립니다"</h4>
-                        <p class="text-slate-400">기장 거래처, 자문 계약 1건이면 1년 마케팅비 회수.</p>
+                    <div class="md:w-1/2 order-1 md:order-2">
+                        <div class="rounded-2xl overflow-hidden shadow-2xl">
+                            <img src="https://images.unsplash.com/photo-1540575861501-7ad060e39fe1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" alt="세미나 현장 이미지" class="w-full h-80 object-cover">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -267,7 +287,7 @@
                     <h3 class="text-xl font-bold text-slate-500 mb-2">Basic (실속형)</h3>
                     <div class="text-4xl font-black text-primary mb-6">100<span class="text-lg font-medium text-slate-400">만원/월</span></div>
                     <p class="text-sm text-slate-500 mb-8 border-b pb-8">"온라인 기초 공사가 안 된 분들을 위한<br>압도적 물량 공세"</p>
-                    <ul class="space-y-4 mb-8 flex-1">
+                    <ul class="space-y-4 mb-8 flex-1 text-sm">
                         <li class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500"></i> <strong>브랜드 블로그 월 30건</strong></li>
                         <li class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500"></i> 매일 발행 (365일 노출)</li>
                         <li class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500"></i> 배포형 블로그 월 20건</li>
@@ -280,9 +300,9 @@
                 <!-- Standard -->
                 <div class="bg-white rounded-2xl shadow-lg p-8 border border-slate-200 flex flex-col hover:-translate-y-2 transition duration-300 relative overflow-hidden">
                     <h3 class="text-xl font-bold text-blue-600 mb-2">Standard (확장형)</h3>
-                    <div class="text-4xl font-black text-primary mb-6">150<span class="text-lg font-medium text-slate-400">만원/월</span></div>
+                    <div class="text-4xl font-black text-primary mb-6">200<span class="text-lg font-medium text-slate-400">만원/월</span></div>
                     <p class="text-sm text-slate-500 mb-8 border-b pb-8">"블로그와 유튜브 숏폼까지,<br>트렌디한 브랜딩의 시작"</p>
-                    <ul class="space-y-4 mb-8 flex-1">
+                    <ul class="space-y-4 mb-8 flex-1 text-sm">
                         <li class="flex items-center gap-3"><i class="fa-solid fa-check text-blue-500"></i> <strong>브랜드 블로그 월 30건</strong></li>
                         <li class="flex items-center gap-3"><i class="fa-solid fa-check text-blue-500"></i> 배포형 블로그 월 50건</li>
                         <li class="flex items-center gap-3"><i class="fa-solid fa-check text-blue-500"></i> <strong>롱폼 1개 + 숏폼 4개</strong></li>
@@ -296,9 +316,9 @@
                 <div class="bg-white rounded-2xl shadow-2xl p-8 border-2 border-secondary flex flex-col transform md:-translate-y-4 hover:-translate-y-6 transition duration-300 relative">
                     <div class="absolute top-0 right-0 bg-secondary text-white text-xs font-bold px-3 py-1 rounded-bl-lg">BEST VALUE</div>
                     <h3 class="text-xl font-bold text-secondary mb-2">Premium (완전독점형)</h3>
-                    <div class="text-4xl font-black text-primary mb-6">200<span class="text-lg font-medium text-slate-400">만원/월</span></div>
+                    <div class="text-4xl font-black text-primary mb-6">250<span class="text-lg font-medium text-slate-400">만원/월</span></div>
                     <p class="text-sm text-slate-500 mb-8 border-b pb-8">"실제 계약(수임)이 간절한 분들을 위한<br>오프라인 영업 연계"</p>
-                    <ul class="space-y-4 mb-8 flex-1">
+                    <ul class="space-y-4 mb-8 flex-1 text-sm">
                         <li class="flex items-center gap-3"><i class="fa-solid fa-check text-secondary"></i> <strong>브랜드 블로그 월 30건</strong></li>
                         <li class="flex items-center gap-3"><i class="fa-solid fa-check text-secondary"></i> <strong>배포형 블로그 월 100건</strong></li>
                         <li class="flex items-center gap-3"><i class="fa-solid fa-check text-secondary"></i> <strong>롱폼 2개 + 숏폼 8개</strong></li>
@@ -318,8 +338,9 @@
     <section id="seminar" class="py-24 bg-white border-t border-slate-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-12">
             <div class="md:w-1/2">
-                <div class="rounded-2xl overflow-hidden shadow-2xl relative">
-                   <video class="w-full h-full object-cover rounded-2xl" controls preload="metadata">
+                <div class="rounded-2xl overflow-hidden shadow-2xl relative bg-slate-100">
+                   <!-- Video Placeholder with Poster Image -->
+                   <video class="w-full h-full object-cover rounded-2xl aspect-video" controls poster="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80">
                        <source src="B2B_마케팅_엔진_해부__성공_사례_분석.mp4" type="video/mp4">
                        브라우저가 비디오 태그를 지원하지 않습니다.
                    </video>
@@ -328,17 +349,17 @@
             <div class="md:w-1/2">
                 <span class="text-secondary font-bold tracking-widest uppercase mb-2 block">Offline Seminar</span>
                 <h2 class="text-3xl md:text-4xl font-bold text-primary mb-6">스타트업 대표를<br>눈앞에서 만나세요.</h2>
-                <p class="text-slate-600 mb-6 text-lg leading-relaxed">
+                <p class="text-slate-600 mb-6 text-lg leading-relaxed break-keep">
                     네스토리움 강남 센터에서는 매주 주제별 스타트업 세미나가 열립니다. 
                     단순히 지식을 전달하는 자리가 아닙니다. 
                     <strong>"내 문제를 해결해 줄 전문가"를 찾는 대표님들과 명함을 교환하고, 즉석에서 상담을 진행하는 영업의 장(Field)</strong>입니다.
                 </p>
                 <div class="flex gap-4">
-                    <div class="bg-slate-50 px-6 py-4 rounded-xl border border-slate-200">
+                    <div class="bg-slate-50 px-6 py-4 rounded-xl border border-slate-200 flex-1 text-center">
                         <p class="text-2xl font-bold text-primary">3배↑</p>
                         <p class="text-sm text-slate-500">대면 상담 시<br>계약 전환율</p>
                     </div>
-                    <div class="bg-slate-50 px-6 py-4 rounded-xl border border-slate-200">
+                    <div class="bg-slate-50 px-6 py-4 rounded-xl border border-slate-200 flex-1 text-center">
                         <p class="text-2xl font-bold text-primary">100%</p>
                         <p class="text-sm text-slate-500">Premium 파트너<br>DB 제공률</p>
                     </div>
@@ -351,7 +372,7 @@
     <section id="contact" class="py-24 bg-primary text-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-3xl md:text-4xl font-bold mb-6">미래 유니콘 기업의 <span class="text-secondary">공식 파트너</span>가 되세요.</h2>
-            <p class="text-slate-300 mb-12 text-lg">
+            <p class="text-slate-300 mb-12 text-lg break-keep">
                 직역별(세무, 법무, 노무, 변리, 행정 등) 파트너는 지역당 1명으로 제한됩니다.<br>
                 지금 신청하지 않으면, 경쟁자가 선점할 수 있습니다.
             </p>
@@ -387,15 +408,15 @@
                 </div>
                 <div class="mb-8">
                     <label class="block text-slate-700 font-bold mb-2">관심 패키지</label>
-                    <div class="flex gap-4">
+                    <div class="flex flex-wrap gap-4">
                         <label class="flex items-center gap-2 cursor-pointer">
                             <input type="radio" name="entry.2010194905" value="Basic (100만)" class="text-secondary focus:ring-secondary" required> <span class="text-slate-600">Basic (100만)</span>
                         </label>
                         <label class="flex items-center gap-2 cursor-pointer">
-                            <input type="radio" name="entry.2010194905" value="Standard (150만)" class="text-secondary focus:ring-secondary"> <span class="text-slate-600">Standard (150만)</span>
+                            <input type="radio" name="entry.2010194905" value="Standard (200만)" class="text-secondary focus:ring-secondary"> <span class="text-slate-600">Standard (200만)</span>
                         </label>
                         <label class="flex items-center gap-2 cursor-pointer">
-                            <input type="radio" name="entry.2010194905" value="Premium (200만)" class="text-secondary focus:ring-secondary" checked> <span class="text-secondary font-bold">Premium (200만)</span>
+                            <input type="radio" name="entry.2010194905" value="Premium (250만)" class="text-secondary focus:ring-secondary" checked> <span class="text-secondary font-bold">Premium (250만)</span>
                         </label>
                     </div>
                 </div>
@@ -413,20 +434,20 @@
     <footer class="bg-slate-900 text-slate-500 py-12 border-t border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-                <div class="col-span-1 md:col-span-2">
-                    <div class="flex items-center gap-2 mb-4">
+                <div class="col-span-1 md:col-span-2 text-center md:text-left">
+                    <div class="flex items-center justify-center md:justify-start gap-2 mb-4">
                         <i class="fa-solid fa-layer-group text-2xl text-slate-400"></i>
                         <span class="font-bold text-xl text-white">NESTORIUM</span>
                     </div>
-                    <p class="mb-4 text-sm">스타트업 엑셀러레이터 & 전문직 마케팅 에이전시.<br>우리는 스타트업 생태계의 성장을 돕고, 전문가와 기업을 연결합니다.</p>
+                    <p class="mb-4 text-sm break-keep">스타트업 엑셀러레이터 & 전문직 마케팅 에이전시.<br>우리는 스타트업 생태계의 성장을 돕고, 전문가와 기업을 연결합니다.</p>
                 </div>
-                <div>
+                <div class="text-center md:text-left">
                     <h4 class="text-white font-bold mb-4">Contact</h4>
                     <p class="text-sm mb-2"><i class="fa-solid fa-location-dot mr-2"></i> 서울특별시 강남구 역삼동</p>
                     <p class="text-sm mb-2"><i class="fa-solid fa-envelope mr-2"></i> kwwhale1204@gmail.com</p>
                     <p class="text-sm"><i class="fa-solid fa-phone mr-2"></i> 010-4747-9647</p>
                 </div>
-                <div>
+                <div class="text-center md:text-left">
                     <h4 class="text-white font-bold mb-4">Menu</h4>
                     <ul class="text-sm space-y-2">
                         <li><a href="#about" class="hover:text-white transition">회사 소개</a></li>
