@@ -12,9 +12,9 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#0f172a', // Dark Navy
-                        secondary: '#d97706', // Gold/Amber
-                        accent: '#f8fafc', // Light Gray
+                        primary: '#0f172a', 
+                        secondary: '#d97706', 
+                        accent: '#f8fafc', 
                     },
                     fontFamily: {
                         sans: ['Noto Sans KR', 'sans-serif'],
@@ -37,6 +37,19 @@
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; 
+            height: 0;
+            overflow: hidden;
+        }
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
     </style>
 </head>
 <body class="font-sans text-slate-800 bg-white antialiased">
@@ -49,31 +62,32 @@
                     <i class="fa-solid fa-layer-group text-3xl text-primary"></i>
                     <span class="font-black text-2xl tracking-tighter text-primary">NESTORIUM</span>
                 </div>
-                <div class="hidden md:flex space-x-8">
+                <div class="hidden lg:flex space-x-8">
                     <a href="#about" class="text-slate-600 hover:text-secondary font-medium transition">Why 네스토리움</a>
                     <a href="#services" class="text-slate-600 hover:text-secondary font-medium transition">솔루션</a>
                     <a href="#platform" class="text-slate-600 hover:text-secondary font-medium transition">플랫폼 미리보기</a>
                     <a href="#pricing" class="text-slate-600 hover:text-secondary font-medium transition">멤버십</a>
-                    <a href="#seminar" class="text-slate-600 hover:text-secondary font-medium transition">세미나</a>
+                    <a href="#seminar" class="text-slate-600 hover:text-secondary font-medium transition">세미나 현장</a>
                 </div>
                 <div class="hidden md:flex">
                     <a href="#contact" class="bg-primary text-white px-6 py-2.5 rounded-full font-bold hover:bg-slate-800 transition shadow-lg transform hover:-translate-y-0.5">
                         파트너 입점 문의
                     </a>
                 </div>
-                <div class="md:hidden flex items-center">
+                <div class="lg:hidden flex items-center">
                     <button id="mobile-menu-btn" class="text-slate-600 hover:text-primary focus:outline-none">
                         <i class="fa-solid fa-bars text-2xl"></i>
                     </button>
                 </div>
             </div>
         </div>
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full shadow-lg">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#about" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-secondary hover:bg-slate-50">Why 네스토리움</a>
-                <a href="#services" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-secondary hover:bg-slate-50">솔루션</a>
-                <a href="#platform" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-secondary hover:bg-slate-50">플랫폼 미리보기</a>
-                <a href="#pricing" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-secondary hover:bg-slate-50">멤버십</a>
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-slate-100 absolute w-full shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center">
+                <a href="#about" class="block px-3 py-3 text-base font-medium text-slate-700 hover:text-secondary">Why 네스토리움</a>
+                <a href="#services" class="block px-3 py-3 text-base font-medium text-slate-700 hover:text-secondary">솔루션</a>
+                <a href="#platform" class="block px-3 py-3 text-base font-medium text-slate-700 hover:text-secondary">플랫폼 미리보기</a>
+                <a href="#pricing" class="block px-3 py-3 text-base font-medium text-slate-700 hover:text-secondary">멤버십</a>
+                <a href="#contact" class="block px-3 py-3 text-base font-bold text-secondary">입점 문의하기</a>
             </div>
         </div>
     </nav>
@@ -81,7 +95,7 @@
     <!-- Hero Section -->
     <header class="hero-bg h-screen flex items-center justify-center text-center px-4 relative text-white">
         <div class="max-w-5xl mx-auto animate-fade-in-up">
-            <span class="inline-block py-1 px-3 rounded-full bg-secondary/20 border border-secondary text-secondary text-sm font-bold mb-6 tracking-wide">
+            <span class="inline-block py-1 px-3 rounded-full bg-secondary/20 border border-secondary text-secondary text-sm font-bold mb-6 tracking-wide uppercase">
                 STARTUP ACCELERATOR & MARKETING AGENCY
             </span>
             <h1 class="text-4xl md:text-6xl lg:text-7xl font-black mb-6 leading-tight">
@@ -89,14 +103,14 @@
                 <span class="text-secondary">진짜 수임</span>을 연결합니다.
             </h1>
             <p class="text-lg md:text-2xl text-slate-300 mb-10 max-w-5xl mx-auto font-light break-keep">
-                전문직 마케팅사는 많습니다.<br>
+                전문직 마케팅사는 많습니다. 
                 하지만, <strong class="text-white font-bold">매달 강남에서 세미나를 열어 '수임이 급한 대표님'을 눈앞에 모셔오는 곳</strong>은 오직 <span class="text-white font-bold">네스토리움</span> 뿐입니다.
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#contact" class="bg-secondary text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-amber-600 transition shadow-xl transform hover:-translate-y-1">
+                <a href="#contact" class="bg-secondary text-white px-10 py-4 rounded-full text-lg font-black hover:bg-amber-600 transition shadow-2xl transform hover:-translate-y-1">
                     파트너 제안서 받기 <i class="fa-solid fa-arrow-right ml-2"></i>
                 </a>
-                <a href="https://nestorium-experts.vercel.app/" target="_blank" class="bg-white/10 backdrop-blur-md border border-white/30 text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-white/20 transition">
+                <a href="https://nestorium-experts.vercel.app/" target="_blank" class="bg-white/10 backdrop-blur-md border border-white/30 text-white px-10 py-4 rounded-full text-lg font-black hover:bg-white/20 transition">
                     고객용 플랫폼 확인 <i class="fa-solid fa-magnifying-glass ml-2"></i>
                 </a>
             </div>
@@ -107,83 +121,94 @@
     </header>
 
     <!-- Why Nestorium -->
-    <section id="about" class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">왜 '엑셀러레이터(AC)'가 마케팅을 할까요?</h2>
-            <div class="w-20 h-1 bg-secondary mx-auto mb-6"></div>
-            <p class="text-xl text-slate-600 max-w-3xl mx-auto mb-16">네스토리움은 단순 광고 대행사가 아닙니다. 우리는 <strong>스타트업을 발굴하고 투자하는 AC</strong>입니다.</p>
+    <section id="about" class="py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <h2 class="text-3xl md:text-5xl font-black text-primary mb-6">왜 '엑셀러레이터(AC)'가 마케팅을 할까요?</h2>
+                <div class="w-24 h-1.5 bg-secondary mx-auto mb-8"></div>
+                <p class="text-xl text-slate-600 max-w-3xl mx-auto break-keep text-center">
+                    네스토리움은 단순 광고 대행사가 아닙니다.<br>
+                    우리는 <strong>스타트업을 발굴하고 투자하는 AC</strong>로서 실질적인 일거리를 창출합니다.
+                </p>
+            </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-xl transition duration-300 group overflow-hidden relative text-left">
-                    <div class="absolute -right-4 -bottom-4 text-slate-200 opacity-20 text-8xl"><i class="fa-solid fa-handshake"></i></div>
-                    <div class="w-14 h-14 bg-white rounded-xl shadow-md flex items-center justify-center text-2xl text-secondary mb-6 group-hover:bg-secondary group-hover:text-white transition relative z-10"><i class="fa-solid fa-handshake"></i></div>
-                    <h3 class="text-xl font-bold text-primary mb-3 relative z-10">검증된 전문가 풀(Pool) 구축</h3>
-                    <p class="text-slate-600 leading-relaxed relative z-10">스타트업들은 항상 좋은 파트너 전문직을 찾습니다. 실력이 검증된 전문가를 파트너로 영입하여 우리 보육 기업들에게 최우선 연결합니다.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="bg-slate-50 p-10 rounded-3xl border border-slate-100 hover:shadow-2xl transition duration-500 group overflow-hidden relative">
+                    <div class="absolute -right-6 -bottom-6 text-slate-200 opacity-20 text-9xl"><i class="fa-solid fa-handshake"></i></div>
+                    <div class="w-16 h-16 bg-white rounded-2xl shadow-md flex items-center justify-center text-3xl text-secondary mb-8 relative z-10 group-hover:bg-secondary group-hover:text-white transition duration-300"><i class="fa-solid fa-handshake"></i></div>
+                    <h3 class="text-2xl font-bold text-primary mb-4 relative z-10">검증된 전문가 풀 구축</h3>
+                    <p class="text-slate-600 leading-relaxed relative z-10 break-keep">스타트업들이 신뢰할 수 있는 전문가를 원합니다. 우리는 실력이 검증된 전문가를 파트너로 영입하여 보육 기업들과 연결합니다.</p>
                 </div>
-                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-xl transition duration-300 group overflow-hidden relative text-left">
-                    <div class="absolute -right-4 -bottom-4 text-slate-200 opacity-20 text-8xl"><i class="fa-solid fa-chart-line"></i></div>
-                    <div class="w-14 h-14 bg-white rounded-xl shadow-md flex items-center justify-center text-2xl text-secondary mb-6 group-hover:bg-secondary group-hover:text-white transition relative z-10"><i class="fa-solid fa-chart-line"></i></div>
-                    <h3 class="text-xl font-bold text-primary mb-3 relative z-10">지속 가능한 동반 성장</h3>
-                    <p class="text-slate-600 leading-relaxed relative z-10">확보한 수익은 다시 스타트업 발굴을 위한 세미나 개최와 초기 투자금으로 재투자되는 선순환 구조입니다.</p>
+                <div class="bg-slate-50 p-10 rounded-3xl border border-slate-100 hover:shadow-2xl transition duration-500 group overflow-hidden relative">
+                    <div class="absolute -right-6 -bottom-6 text-slate-200 opacity-20 text-9xl"><i class="fa-solid fa-chart-line"></i></div>
+                    <div class="w-16 h-16 bg-white rounded-2xl shadow-md flex items-center justify-center text-3xl text-secondary mb-8 relative z-10 group-hover:bg-secondary group-hover:text-white transition duration-300"><i class="fa-solid fa-chart-line"></i></div>
+                    <h3 class="text-2xl font-bold text-primary mb-4 relative z-10">지속 가능한 선순환 구조</h3>
+                    <p class="text-slate-600 leading-relaxed relative z-10 break-keep">파트너십 수익은 다시 유망 스타트업 발굴과 초기 투자금으로 재투자됩니다. 파트너의 성장이 곧 우리의 성장입니다.</p>
                 </div>
-                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-xl transition duration-300 group overflow-hidden relative text-left">
-                    <div class="absolute -right-4 -bottom-4 text-slate-200 opacity-20 text-8xl"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
-                    <div class="w-14 h-14 bg-white rounded-xl shadow-md flex items-center justify-center text-2xl text-secondary mb-6 group-hover:bg-secondary group-hover:text-white transition relative z-10"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
-                    <h3 class="text-xl font-bold text-primary mb-3 relative z-10">가장 강력한 딜 소싱(Deal Sourcing)</h3>
-                    <p class="text-slate-600 leading-relaxed relative z-10">도움이 필요한 초기 창업자들을 모으고, 그들을 네스토리움 생태계로 끌어들이는 가장 강력한 영업입니다.</p>
+                <div class="bg-slate-50 p-10 rounded-3xl border border-slate-100 hover:shadow-2xl transition duration-500 group overflow-hidden relative">
+                    <div class="absolute -right-6 -bottom-6 text-slate-200 opacity-20 text-9xl"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+                    <div class="w-16 h-16 bg-white rounded-2xl shadow-md flex items-center justify-center text-3xl text-secondary mb-8 relative z-10 group-hover:bg-secondary group-hover:text-white transition duration-300"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+                    <h3 class="text-2xl font-bold text-primary mb-4 relative z-10">강력한 딜 소싱 경쟁력</h3>
+                    <p class="text-slate-600 leading-relaxed relative z-10 break-keep">매주 열리는 세미나를 통해 도움이 절실한 초기 창업자들을 대거 확보하며, 이것은 파트너에게 독점적인 영업 기회가 됩니다.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- The Solution: 실제 이미지 적용 -->
-    <section id="services" class="py-24 bg-slate-900 text-white relative overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-            <span class="text-secondary font-bold tracking-wider uppercase">Our Solution</span>
-            <h2 class="text-3xl md:text-5xl font-black mt-2 mb-16">전문직을 위한 <span class="text-secondary">올인원 마케팅</span></h2>
-            <div class="space-y-24 text-left">
-                <!-- Feature 1 -->
-                <div class="flex flex-col md:flex-row items-center gap-12">
-                    <div class="md:w-1/2 order-2 md:order-1">
-                        <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700 shadow-2xl relative overflow-hidden">
-                            <div class="flex items-center gap-4 mb-6">
-                                <div class="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center text-xl font-bold text-white">01</div>
-                                <h3 class="text-2xl font-bold">365일 매일 발행되는<br>압도적 블로그 점유율</h3>
+    <!-- The Solution -->
+    <section id="services" class="py-32 bg-slate-900 text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-24">
+                <span class="text-secondary font-black tracking-widest uppercase mb-4 block">Professional Solution</span>
+                <h2 class="text-3xl md:text-5xl font-black mt-2 mb-6">전문직을 위한 <span class="text-secondary">올인원 마케팅</span></h2>
+            </div>
+
+            <div class="space-y-32">
+                <!-- Feature 1: 포스터 적용 -->
+                <div class="flex flex-col lg:flex-row items-center gap-16">
+                    <div class="lg:w-1/2 order-2 lg:order-1 text-left">
+                        <div class="bg-slate-800 p-10 rounded-3xl border border-slate-700 shadow-2xl">
+                            <div class="flex items-center gap-6 mb-8 text-left">
+                                <div class="w-14 h-14 bg-secondary rounded-2xl flex items-center justify-center text-2xl font-black text-white">01</div>
+                                <h3 class="text-3xl font-black text-left">365일 압도적인<br>브랜드 블로그 장악</h3>
                             </div>
-                            <p class="text-slate-300 mb-6 leading-relaxed">경쟁사들이 주 2~3회 올릴 때, 저희는 자동화 시스템을 통해 매일 발행합니다. 지역 키워드를 완벽하게 장악합니다.</p>
-                            <ul class="text-slate-400 space-y-2">
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-secondary"></i> 브랜드 블로그 월 30건 발행</li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-secondary"></i> 키워드 상위노출 최적화(SEO)</li>
+                            <p class="text-slate-300 text-lg mb-8 leading-relaxed text-left">
+                                경쟁사들이 주 2~3회 올릴 때, 저희는 <strong>자동화 시스템을 통해 매일 발행</strong>합니다. 
+                                검색했을 때 전문가님의 성함과 인근 지역 키워드를 완벽하게 도배하여 신뢰를 선점합니다.
+                            </p>
+                            <ul class="space-y-4 text-slate-400 text-left">
+                                <li class="flex items-center gap-3"><i class="fa-solid fa-check-circle text-secondary text-xl"></i> 브랜드 블로그 월 30건 발행</li>
+                                <li class="flex items-center gap-3"><i class="fa-solid fa-check-circle text-secondary text-xl"></i> 상위 노출 최적화 SEO 로직</li>
                             </ul>
                         </div>
                     </div>
-                    <div class="md:w-1/2 order-1 md:order-2">
-                        <div class="rounded-2xl overflow-hidden shadow-2xl transform md:rotate-2 hover:rotate-0 transition duration-500">
-                            <!-- 실제 포스터 이미지 활용 -->
-                            <img src="KakaoTalk_20260104_202342933.png" alt="세미나 포스터" class="w-full h-80 object-cover">
+                    <div class="lg:w-1/2 order-1 lg:order-2">
+                        <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-white/10">
+                            <img src="KakaoTalk_20260104_202342933.png" alt="세미나 포스터" class="w-full h-full object-cover">
                         </div>
                     </div>
                 </div>
-                <!-- Feature 3: 현장 사진 적용 -->
-                <div class="flex flex-col md:flex-row items-center gap-12">
-                    <div class="md:w-1/2">
-                        <div class="rounded-2xl overflow-hidden shadow-2xl transform md:-rotate-2 hover:rotate-0 transition duration-500">
-                            <img src="KakaoTalk_20260104_203135356.jpg" alt="세미나 현장 사진" class="w-full h-80 object-cover">
+
+                <!-- Feature 2: 현장 사진 적용 -->
+                <div class="flex flex-col lg:flex-row items-center gap-16">
+                    <div class="lg:w-1/2">
+                        <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-white/10">
+                            <img src="KakaoTalk_20260104_203135356.jpg" alt="세미나 현장 사진" class="w-full h-full object-cover">
                         </div>
                     </div>
-                    <div class="md:w-1/2">
-                        <div class="bg-gradient-to-br from-secondary to-amber-700 p-8 rounded-2xl shadow-2xl text-white transform hover:scale-105 transition duration-300">
-                            <div class="flex items-center gap-4 mb-6">
-                                <div class="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center text-xl font-bold text-white">02</div>
-                                <h3 class="text-2xl font-bold">오프라인 세미나 개최 &<br>DB 독점 제공</h3>
+                    <div class="lg:w-1/2 text-left">
+                        <div class="bg-gradient-to-br from-secondary to-amber-700 p-10 rounded-3xl shadow-2xl text-white transform hover:scale-105 transition duration-300">
+                            <div class="flex items-center gap-6 mb-8 text-left">
+                                <div class="w-14 h-14 bg-white/20 rounded-2xl flex items-center justify-center text-2xl font-black text-white">02</div>
+                                <h3 class="text-3xl font-black text-left">오프라인 세미나 개최 &<br>DB 독점 제공</h3>
                             </div>
-                            <p class="text-white/90 mb-6 font-medium text-lg leading-relaxed">
+                            <p class="text-white/90 text-lg mb-8 leading-relaxed text-left">
                                 실제 수임이 필요한 스타트업 대표들을 강남 세미나실로 직접 모객해 드립니다.
-                                <strong>참석자 40명의 DB 시장 가치만 320만 원 이상</strong>입니다.
+                                <strong>참석자 40명의 DB 시장 가치만 320만 원 이상</strong>이며, 이는 프리미엄 파트너에게 독점 제공됩니다.
                             </p>
-                            <div class="bg-black/20 p-4 rounded-lg backdrop-blur-sm border border-white/10">
-                                <p class="font-bold flex items-center gap-2 text-yellow-300"><i class="fa-solid fa-star"></i> 가망 고객 DB 가치 분석</p>
-                                <p class="text-sm mt-1">평균 리드 단가 8만 원 기준, 40명 확보 시 최소 320만 원 이상의 시장 가치를 즉시 획득합니다.</p>
+                            <div class="bg-black/20 p-6 rounded-2xl backdrop-blur-sm border border-white/10 text-left">
+                                <p class="font-bold flex items-center gap-2 text-yellow-300 text-lg mb-2 text-left"><i class="fa-solid fa-star"></i> 가망 고객 DB 가치 분석</p>
+                                <p class="text-sm opacity-90 leading-relaxed text-left">평균 리드 단가 8만 원 기준, 40명 확보 시 <span class="underline font-black">최소 320만 원 이상의 가치</span>를 즉시 획득합니다.</p>
                             </div>
                         </div>
                     </div>
@@ -193,30 +218,30 @@
     </section>
 
     <!-- 플랫폼 미리보기: 실제 포스터 적용 -->
-    <section id="platform" class="py-24 bg-accent relative">
+    <section id="platform" class="py-32 bg-accent relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row items-center gap-16">
-                <div class="md:w-1/2 text-left">
-                    <span class="text-blue-600 font-bold tracking-widest uppercase mb-2 block font-black">Live Platform</span>
-                    <h2 class="text-3xl md:text-5xl font-black text-primary mb-6 leading-tight">실제 고객들이 전문가님을<br><span class="text-secondary">만나고 의뢰하는 공간</span></h2>
-                    <p class="text-slate-600 text-lg mb-8 leading-relaxed break-keep">
+            <div class="flex flex-col lg:flex-row items-center gap-20">
+                <div class="lg:w-1/2 text-left">
+                    <span class="text-blue-600 font-black tracking-widest uppercase mb-4 block">Client Directory</span>
+                    <h2 class="text-3xl md:text-5xl font-black text-primary mb-8 leading-tight text-left">고객들이 전문가님을<br><span class="text-secondary">직접 선택하는 공간</span></h2>
+                    <p class="text-slate-600 text-xl mb-10 leading-relaxed break-keep text-left">
                         네스토리움의 스타트업 고객들은 아래 사이트를 통해 전문가님을 만납니다.<br><br>
-                        영상으로 신뢰를 쌓고, 숏폼으로 지식을 전달하며, 단 한 번의 클릭으로 상담을 신청하는 전문가 전용 디렉토리 플랫폼을 직접 확인해보세요.
+                        영상으로 신뢰를 쌓고, 숏폼으로 지식을 전달하며, 단 한 번의 클릭으로 상담을 신청하는 전문가 전용 플랫폼을 직접 확인해보세요.
                     </p>
-                    <a href="https://nestorium-experts.vercel.app/" target="_blank" class="inline-block bg-primary text-white px-10 py-4 rounded-xl text-xl font-black hover:bg-slate-800 transition shadow-2xl transform hover:-translate-y-1">
-                        고객용 플랫폼 둘러보기 <i class="fa-solid fa-arrow-up-right-from-square ml-2"></i>
+                    <a href="https://nestorium-experts.vercel.app/" target="_blank" class="inline-block bg-primary text-white px-10 py-5 rounded-2xl text-2xl font-black hover:bg-slate-800 transition shadow-2xl transform hover:-translate-y-2">
+                        고객용 플랫폼 방문하기 <i class="fa-solid fa-arrow-up-right-from-square ml-2 text-left"></i>
                     </a>
                 </div>
-                <div class="md:w-1/2">
-                    <div class="rounded-2xl border-8 border-slate-800 shadow-2xl overflow-hidden bg-white">
-                        <div class="bg-slate-800 h-8 w-full flex items-center px-4 gap-2 text-white">
-                             <div class="w-3 h-3 rounded-full bg-red-500"></div><div class="w-3 h-3 rounded-full bg-yellow-500"></div><div class="w-3 h-3 rounded-full bg-green-500"></div>
-                             <div class="ml-4 bg-slate-700 rounded-full text-[10px] text-slate-400 px-3 py-1 flex-1 text-center">nestorium-experts.vercel.app</div>
+                <div class="lg:w-1/2">
+                    <div class="rounded-3xl border-[12px] border-slate-800 shadow-2xl overflow-hidden bg-white">
+                        <div class="bg-slate-800 h-10 w-full flex items-center px-6 gap-3">
+                            <div class="w-3.5 h-3.5 rounded-full bg-red-500"></div><div class="w-3.5 h-3.5 rounded-full bg-yellow-500"></div><div class="w-3.5 h-3.5 rounded-full bg-green-500"></div>
+                            <div class="ml-4 bg-slate-700 rounded-full text-xs text-slate-400 px-4 py-1.5 flex-1 text-center font-mono">nestorium-experts.vercel.app</div>
                         </div>
-                        <div class="aspect-[16/10] bg-slate-100 relative group cursor-pointer" onclick="window.open('https://nestorium-experts.vercel.app/', '_blank')">
+                        <div class="aspect-[16/11] bg-slate-100 relative group cursor-pointer" onclick="window.open('https://nestorium-experts.vercel.app/', '_blank')">
                             <img src="KakaoTalk_20260104_203401170.png" alt="플랫폼 대표 포스터" class="w-full h-full object-cover">
-                            <div class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
-                                <span class="bg-white text-primary px-6 py-2 rounded-full font-bold shadow-lg">사이트 방문하기</span>
+                            <div class="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                                <span class="bg-white text-primary px-8 py-3 rounded-full font-black text-xl shadow-2xl">사이트 방문하기</span>
                             </div>
                         </div>
                     </div>
@@ -225,130 +250,163 @@
         </div>
     </section>
 
-    <!-- Pricing Section -->
-    <section id="pricing" class="py-24 bg-slate-50">
+    <!-- Pricing Section: 상향된 금액 복구 -->
+    <section id="pricing" class="py-32 bg-slate-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">합리적인 파트너십 플랜</h2>
-            <p class="text-slate-600 mb-16">제공되는 <strong>잠재 고객 DB의 가치</strong>만으로도 멤버십 비용을 충분히 회수합니다.</p>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-5xl font-black text-primary mb-6">합리적인 파트너십 멤버십</h2>
+            <p class="text-slate-600 text-xl mb-20 break-keep">DB 시장 가치만으로도 <strong class="text-primary font-black">멤버십 비용의 2배 이상</strong>을 돌려받으시는 압도적 구조입니다.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
                 <!-- Basic -->
-                <div class="bg-white rounded-2xl shadow-lg p-8 border border-slate-200 flex flex-col hover:-translate-y-2 transition duration-300 text-left">
-                    <h3 class="text-xl font-bold text-slate-500 mb-2">Basic (실속형)</h3>
-                    <div class="text-4xl font-black text-primary mb-6">100<span class="text-lg font-medium text-slate-400">만원/월</span></div>
-                    <p class="text-sm text-slate-500 mb-8 border-b pb-8">"온라인 기초 공사가 안 된 분들을 위한 압도적 물량 공세"</p>
-                    <ul class="space-y-4 mb-8 flex-1 text-sm">
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500"></i> <strong>브랜드 블로그 월 30건</strong></li>
-                        <li class="flex items-center gap-3 text-slate-400"><i class="fa-solid fa-xmark"></i> 유튜브 영상 지원 없음</li>
+                <div class="bg-white rounded-3xl shadow-xl p-10 border border-slate-200 flex flex-col hover:-translate-y-3 transition duration-500 text-left">
+                    <h3 class="text-2xl font-bold text-slate-400 mb-2 text-left">Basic</h3>
+                    <div class="text-5xl font-black text-primary mb-8 text-left">100<span class="text-xl font-medium text-slate-400">만원/월</span></div>
+                    <p class="text-slate-500 mb-10 border-b pb-10 min-h-[80px] text-left">"온라인 기초 브랜딩과 지역 키워드 장악이 필요한 분들을 위한 실속형"</p>
+                    <ul class="space-y-5 mb-12 flex-1 text-left">
+                        <li class="flex items-center gap-3 font-medium text-left"><i class="fa-solid fa-circle-check text-green-500 text-xl text-left"></i> 브랜드 블로그 월 30건</li>
+                        <li class="flex items-center gap-3 font-medium text-left"><i class="fa-solid fa-circle-check text-green-500 text-xl text-left"></i> 상위노출 키워드 관리</li>
                     </ul>
-                    <a href="#contact" class="block w-full py-3 px-6 text-center rounded-lg border-2 border-primary text-primary font-bold hover:bg-primary hover:text-white transition">문의하기</a>
+                    <a href="#contact" class="block w-full py-4 px-6 text-center rounded-2xl border-2 border-primary text-primary font-black hover:bg-primary hover:text-white transition">문의하기</a>
                 </div>
                 <!-- Standard -->
-                <div class="bg-white rounded-2xl shadow-lg p-8 border border-slate-200 flex flex-col hover:-translate-y-2 transition duration-300 relative overflow-hidden text-left border-blue-500/30">
-                    <h3 class="text-xl font-bold text-blue-600 mb-2">Standard (확장형)</h3>
-                    <div class="text-4xl font-black text-primary mb-6">200<span class="text-lg font-medium text-slate-400">만원/월</span></div>
-                    <p class="text-sm text-slate-500 mb-8 border-b pb-8">"블로그와 유튜브 숏폼까지, 트렌디한 브랜딩의 시작"</p>
-                    <ul class="space-y-4 mb-8 flex-1 text-sm">
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-blue-500"></i> <strong>브랜드 블로그 월 30건</strong></li>
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-blue-500"></i> <strong>롱폼 1개 + 숏폼 4개</strong></li>
+                <div class="bg-white rounded-3xl shadow-xl p-10 border-4 border-blue-500/20 flex flex-col hover:-translate-y-3 transition duration-500 text-left relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-blue-500 text-white text-xs font-black px-4 py-1.5 rounded-bl-xl uppercase text-left">Popular</div>
+                    <h3 class="text-2xl font-bold text-blue-600 mb-2 text-left">Standard</h3>
+                    <div class="text-5xl font-black text-primary mb-8 text-left">200<span class="text-xl font-medium text-slate-400">만원/월</span></div>
+                    <p class="text-slate-500 mb-10 border-b pb-10 min-h-[80px] text-left">"영상 마케팅과 세미나 참여를 통해 전문성을 적극 홍보하는 확장형"</p>
+                    <ul class="space-y-5 mb-12 flex-1 text-left">
+                        <li class="flex items-center gap-3 font-medium text-left"><i class="fa-solid fa-circle-check text-blue-500 text-xl text-left"></i> 브랜드 블로그 월 30건</li>
+                        <li class="flex items-center gap-3 font-medium text-left"><i class="fa-solid fa-circle-check text-blue-500 text-xl text-left"></i> 전문가 브랜딩 영상 촬영</li>
                     </ul>
-                    <a href="#contact" class="block w-full py-3 px-6 text-center rounded-lg bg-primary text-white font-bold hover:bg-slate-800 transition">신청하기</a>
+                    <a href="#contact" class="block w-full py-4 px-6 text-center rounded-2xl bg-primary text-white font-black hover:bg-slate-800 transition shadow-lg">신청하기</a>
                 </div>
                 <!-- Premium -->
-                <div class="bg-white rounded-2xl shadow-2xl p-8 border-2 border-secondary flex flex-col transform md:-translate-y-4 hover:-translate-y-6 transition duration-300 relative text-left">
-                    <div class="absolute top-0 right-0 bg-secondary text-white text-xs font-bold px-3 py-1 rounded-bl-lg font-black">ROI 200%+ 보장</div>
-                    <h3 class="text-xl font-bold text-secondary mb-2">Premium (완전독점형)</h3>
-                    <div class="text-4xl font-black text-primary mb-2">250<span class="text-lg font-medium text-slate-400">만원/월</span></div>
-                    <div class="text-xs font-bold text-amber-600 mb-4 flex items-center gap-1"><i class="fa-solid fa-circle-exclamation"></i> DB 가치 320만 원 포함</div>
-                    <p class="text-sm text-slate-500 mb-6 border-b pb-6">"실제 계약(수임)이 간절한 분들을 위한 오프라인 영업 연계 플랜"</p>
-                    <ul class="space-y-4 mb-8 flex-1 text-sm">
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-star text-secondary"></i> <strong>월 평균 40명 가망 고객 DB 독점</strong></li>
-                        <li class="flex items-center gap-3 font-bold text-primary"><i class="fa-solid fa-calculator text-secondary"></i> 제공 가치만으로 멤버십 비용 상회</li>
+                <div class="bg-white rounded-3xl shadow-2xl p-10 border-4 border-secondary flex flex-col transform md:-translate-y-6 hover:-translate-y-10 transition duration-500 text-left relative">
+                    <div class="absolute top-0 right-0 bg-secondary text-white text-xs font-black px-4 py-1.5 rounded-bl-xl text-left">ROI 200%+</div>
+                    <h3 class="text-2xl font-bold text-secondary mb-2 text-left text-left text-left">Premium</h3>
+                    <div class="text-5xl font-black text-primary mb-2 text-left text-left text-left">250<span class="text-xl font-medium text-slate-400">만원/월</span></div>
+                    <div class="text-xs font-black text-amber-600 mb-6 flex items-center gap-2 text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left"><i class="fa-solid fa-fire text-lg text-left text-left"></i> DB 가치 320만 원 독점 포함</div>
+                    <p class="text-slate-500 mb-10 border-b pb-10 min-h-[80px] text-left">"세미나 메인 호스트로서 잠재 고객 DB를 독점하고 수임을 확정 짓는 플랜"</p>
+                    <ul class="space-y-5 mb-12 flex-1 text-left">
+                        <li class="flex items-center gap-3 font-black text-primary text-left"><i class="fa-solid fa-crown text-secondary text-xl text-left text-left"></i> 세미나 메인 호스트 보장</li>
+                        <li class="flex items-center gap-3 font-black text-primary text-left text-left"><i class="fa-solid fa-database text-secondary text-xl text-left"></i> 참석자 40인 실명 DB 독점</li>
                     </ul>
-                    <a href="#contact" class="block w-full py-4 px-6 text-center rounded-lg bg-secondary text-white font-bold hover:bg-amber-600 transition shadow-lg">Premium 파트너 신청 <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                    <a href="#contact" class="block w-full py-5 px-6 text-center rounded-2xl bg-secondary text-white font-black text-xl hover:bg-amber-600 transition shadow-2xl">Premium 파트너 신청</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ROI Info Summary -->
-    <section class="py-16 bg-primary text-white overflow-hidden relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-10">
-            <div class="md:w-1/2 text-left">
-                <h2 class="text-3xl font-black mb-6">왜 Premium 플랜이<br>가장 먼저 마감될까요?</h2>
-                <p class="text-slate-300 mb-8 leading-relaxed">
-                    시중 법인 고객 리드(Lead) 1건 확보 비용은 약 8만 원입니다. <br><br>
-                    네스토리움 세미나에는 평균 40명의 대표님이 참석하며, 프리미엄 파트너는 이분들의 <strong>실명, 연락처, 사업 고민이 담긴 DB</strong>를 독점 제공받습니다. 데이터 가치만 320만 원. 시작하는 순간부터 이득입니다.
-                </p>
-            </div>
-            <div class="md:w-1/2 flex justify-center">
-                <div class="bg-white/10 p-8 rounded-3xl border border-white/20 backdrop-blur-md w-full max-w-sm">
-                    <div class="space-y-6">
-                        <div class="flex justify-between items-center text-left"><span class="text-slate-400">DB 시장 가치</span><span class="font-bold text-xl">320만 원</span></div>
-                        <div class="flex justify-between items-center text-left"><span class="text-slate-400">마케팅 실행 가치</span><span class="font-bold text-xl">200만 원</span></div>
-                        <div class="w-full h-px bg-white/20"></div>
-                        <div class="flex justify-between items-center text-secondary text-left"><span class="font-bold">총 제공 가치</span><span class="font-black text-3xl">520만 원+</span></div>
-                        <div class="bg-secondary text-white text-center py-2 rounded-lg font-bold text-sm">멤버십 가격: 월 250만 원</div>
+    <!-- ROI Info Visualization: 가치 분석 복구 -->
+    <section class="py-24 bg-primary text-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center justify-between gap-16">
+                <div class="lg:w-1/2 text-left">
+                    <h2 class="text-3xl md:text-5xl font-black mb-8 leading-tight text-left">결제하시는 금액보다<br><span class="text-secondary text-4xl md:text-6xl text-left">더 많은 가치</span>를 즉시 드립니다.</h2>
+                    <p class="text-slate-400 text-xl leading-relaxed break-keep text-left">
+                        시중의 유효한 법인 고객 리드(Lead) 확보 비용은 건당 약 8만 원입니다.<br><br>
+                        네스토리움은 매달 평균 40명의 유효 대표님들을 세미나에 모객하며, 프리미엄 파트너는 이분들의 **실명, 연락처, 고민 사항이 담긴 DB**를 즉시 넘겨받습니다. 데이터 가치로만 이미 320만 원입니다.
+                    </p>
+                </div>
+                <div class="lg:w-1/2 flex justify-center">
+                    <div class="bg-white/10 p-10 rounded-[2.5rem] border-2 border-white/20 backdrop-blur-xl w-full max-w-md shadow-2xl">
+                        <div class="space-y-8 text-left">
+                            <div class="flex justify-between items-center text-left text-left">
+                                <span class="text-slate-400 text-lg font-bold text-left">참석자 40명 DB 가치</span>
+                                <span class="font-black text-2xl text-white text-left">320만 원</span>
+                            </div>
+                            <div class="flex justify-between items-center text-left text-left">
+                                <span class="text-slate-400 text-lg font-bold text-left">마케팅 실행 서비스 가치</span>
+                                <span class="font-black text-2xl text-white text-left">200만 원</span>
+                            </div>
+                            <div class="w-full h-px bg-white/20"></div>
+                            <div class="flex justify-between items-center text-secondary text-left text-left">
+                                <span class="font-black text-xl uppercase tracking-tighter text-left">Total Value</span>
+                                <span class="font-black text-5xl text-left">520만 원+</span>
+                            </div>
+                            <div class="bg-secondary/20 border border-secondary text-secondary text-center py-4 rounded-2xl font-black text-lg text-center">
+                                멤버십 가격: 월 250만 원
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Seminar Section: 실제 사진과 영상 적용 -->
-    <section id="seminar" class="py-24 bg-white border-t border-slate-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-12">
-            <div class="md:w-1/2 space-y-6">
+    <!-- Seminar Section: 실제 사진과 영상 적용 (분리 배치) -->
+    <section id="seminar" class="py-32 bg-white border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-start gap-16">
+            <div class="lg:w-1/2 space-y-10">
                 <!-- 실제 패널 토크 현장 사진 -->
-                <div class="rounded-2xl overflow-hidden shadow-lg h-64">
-                   <img src="KakaoTalk_20260104_203227910.jpg" alt="실제 패널 토크 현장" class="w-full h-full object-cover">
+                <div class="rounded-[2rem] overflow-hidden shadow-2xl border-8 border-slate-50 h-80">
+                   <img src="KakaoTalk_20260104_203227910.jpg" alt="패널 토크 현장" class="w-full h-full object-cover">
                 </div>
-                <!-- 실제 세미나 영상 배치 -->
-                <div class="rounded-2xl overflow-hidden shadow-2xl relative bg-slate-100 aspect-video">
-                   <video class="w-full h-full object-cover rounded-2xl" controls playsinline>
-                       <source src="KakaoTalk_20260104_203715917.mp4" type="video/mp4">
-                   </video>
+                <!-- 실제 세미나 영상 -->
+                <div class="rounded-[2.5rem] overflow-hidden shadow-2xl bg-black border-4 border-slate-100">
+                   <div class="video-container">
+                       <video controls playsinline poster="KakaoTalk_20260104_203135356.jpg">
+                           <source src="KakaoTalk_20260104_203715917.mp4" type="video/mp4">
+                       </video>
+                   </div>
                 </div>
             </div>
-            <div class="md:w-1/2 text-left">
-                <span class="text-secondary font-bold tracking-widest uppercase mb-2 block">Offline Seminar</span>
-                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-6">스타트업 대표를<br>눈앞에서 만나세요.</h2>
-                <p class="text-slate-600 mb-6 text-lg leading-relaxed break-keep">
-                    네스토리움 강남 센터에서는 매주 주제별 스타트업 세미나가 열립니다. 
-                    단순히 지식을 전달하는 자리가 아닙니다. 
-                    <strong>"내 문제를 해결해 줄 전문가"를 찾는 대표님들과 명함을 교환하고 상담을 진행하는 진짜 영업의 장</strong>입니다.
+            <div class="lg:w-1/2 text-left sticky top-32">
+                <span class="text-secondary font-black tracking-widest uppercase mb-4 block text-left text-left">Real Performance</span>
+                <h2 class="text-3xl md:text-5xl font-black text-primary mb-8 leading-tight text-left">스타트업 대표를<br><span class="text-secondary">눈앞에서 만나세요.</span></h2>
+                <p class="text-slate-600 mb-10 text-xl leading-relaxed break-keep text-left">
+                    네스토리움 강남 센터의 세미나는 단순 강연이 아닙니다.<br><br>
+                    <strong>"내 문제를 당장 해결해 줄 전문가"를 찾으러 온 대표님들과 한 공간에서 호흡하며 명함을 교환하는 현장입니다.</strong><br><br>
+                    우리가 그 완벽한 무대를 세팅해 드립니다. 파트너님은 몸만 오시면 됩니다.
                 </p>
-                <div class="flex gap-4 text-center">
-                    <div class="bg-slate-50 px-6 py-4 rounded-xl border border-slate-200 flex-1"><p class="text-2xl font-bold text-primary">3배↑</p><p class="text-sm text-slate-500">계약 전환율</p></div>
-                    <div class="bg-slate-50 px-6 py-4 rounded-xl border border-slate-200 flex-1"><p class="text-2xl font-bold text-primary">40명+</p><p class="text-sm text-slate-500">평균 참석 인원</p></div>
+                <div class="grid grid-cols-2 gap-6 text-center">
+                    <div class="bg-slate-50 px-8 py-8 rounded-3xl border border-slate-200 text-center shadow-sm"><p class="text-4xl font-black text-primary mb-2 text-center">3배↑</p><p class="text-sm text-slate-500 font-bold text-center">계약 전환율</p></div>
+                    <div class="bg-slate-50 px-8 py-8 rounded-3xl border border-slate-200 text-center shadow-sm"><p class="text-4xl font-black text-primary mb-2 text-center text-center">40명+</p><p class="text-sm text-slate-500 font-bold text-center text-center">평균 참석 인원</p></div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Form -->
-    <section id="contact" class="py-24 bg-primary text-white">
+    <section id="contact" class="py-32 bg-primary text-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-12">미래 유니콘 기업의 <span class="text-secondary">공식 파트너</span>가 되세요.</h2>
+            <h2 class="text-3xl md:text-5xl font-black mb-16 text-center">미래 유니콘 기업의<br><span class="text-secondary">공식 파트너</span>가 되세요.</h2>
             <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
-            <form id="contact-form" action="https://docs.google.com/forms/d/e/1FAIpQLSeib1mRigVAKUapGnSQvPQTIpuAdAmbzr2c_HOKHYvtRW1EAw/formResponse" method="POST" target="hidden_iframe" class="bg-white rounded-2xl p-8 md:p-10 shadow-2xl text-left max-w-2xl mx-auto text-slate-800">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                    <div><label class="block text-slate-700 font-bold mb-2">전문직</label><select name="entry.1421476325" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-4 py-3 focus:border-secondary focus:outline-none" required><option value="">선택해주세요</option><option value="변호사">변호사</option><option value="법무사">법무사</option><option value="변리사">변리사</option><option value="행정사">행정사</option><option value="세무사">세무사</option><option value="노무사">노무사</option><option value="감정평가사">감정평가사</option><option value="기타">기타 전문직</option></select></div>
-                    <div><label class="block text-slate-700 font-bold mb-2">성함/직함</label><input type="text" name="entry.1432874760" placeholder="예: 홍길동 세무사" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-4 py-3 focus:border-secondary focus:outline-none" required></div>
+            <form id="contact-form" action="https://docs.google.com/forms/d/e/1FAIpQLSeib1mRigVAKUapGnSQvPQTIpuAdAmbzr2c_HOKHYvtRW1EAw/formResponse" method="POST" target="hidden_iframe" class="bg-white rounded-[2.5rem] p-10 md:p-16 shadow-2xl text-left max-w-2xl mx-auto text-slate-800">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8 text-left">
+                    <div><label class="block text-slate-700 font-black mb-3 text-left">전문분야</label><select name="entry.1421476325" class="w-full bg-slate-50 border border-slate-300 rounded-2xl px-5 py-4 focus:border-secondary focus:outline-none" required><option value="">선택해주세요</option><option value="변호사">변호사</option><option value="법무사">법무사</option><option value="변리사">변리사</option><option value="행정사">행정사</option><option value="세무사">세무사</option><option value="노무사">노무사</option><option value="감정평가사">감정평가사</option><option value="기타 전문직">기타 전문직</option></select></div>
+                    <div><label class="block text-slate-700 font-black mb-3 text-left">성함/직함</label><input type="text" name="entry.1432874760" placeholder="예: 홍길동 세무사" class="w-full bg-slate-50 border border-slate-300 rounded-2xl px-5 py-4 focus:border-secondary focus:outline-none" required></div>
                 </div>
-                <div class="mb-6"><label class="block text-slate-700 font-bold mb-2">연락처</label><input type="tel" name="entry.266158887" placeholder="010-0000-0000" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-4 py-3 focus:border-secondary focus:outline-none" required></div>
-                <div class="mb-8"><label class="block text-slate-700 font-bold mb-2 text-left">관심 패키지</label><div class="flex flex-wrap gap-4"><label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="entry.2010194905" value="Basic (100만)" class="text-secondary focus:ring-secondary" required> Basic</label><label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="entry.2010194905" value="Standard (200만)" class="text-secondary focus:ring-secondary"> Standard</label><label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="entry.2010194905" value="Premium (250만)" class="text-secondary focus:ring-secondary" checked> Premium</label></div></div>
-                <button type="submit" id="submit-btn" class="w-full bg-secondary text-white font-bold py-4 rounded-lg text-lg hover:bg-amber-600 transition shadow-lg">무료 상담 및 제안서 받기</button>
+                <div class="mb-8 text-left"><label class="block text-slate-700 font-black mb-3 text-left">연락처</label><input type="tel" name="entry.266158887" placeholder="010-0000-0000" class="w-full bg-slate-50 border border-slate-300 rounded-2xl px-5 py-4 focus:border-secondary focus:outline-none" required></div>
+                <div class="mb-12 text-left">
+                    <label class="block text-slate-700 font-black mb-4 text-left">관심 패키지</label>
+                    <div class="flex flex-col gap-4 text-left">
+                        <label class="flex items-center gap-3 cursor-pointer bg-slate-50 p-4 rounded-xl border border-slate-100 hover:bg-slate-100 transition text-left"><input type="radio" name="entry.2010194905" value="Basic (100만)" class="w-5 h-5 text-secondary focus:ring-secondary" required> Basic (100만)</label>
+                        <label class="flex items-center gap-3 cursor-pointer bg-slate-50 p-4 rounded-xl border border-slate-100 hover:bg-slate-100 transition text-left"><input type="radio" name="entry.2010194905" value="Standard (200만)" class="w-5 h-5 text-secondary focus:ring-secondary"> Standard (200만)</label>
+                        <label class="flex items-center gap-3 cursor-pointer bg-slate-50 p-4 rounded-xl border-secondary/30 bg-secondary/5 font-black transition text-left"><input type="radio" name="entry.2010194905" value="Premium (250만)" class="w-5 h-5 text-secondary focus:ring-secondary" checked> Premium (250만)</label>
+                    </div>
+                </div>
+                <button type="submit" id="submit-btn" class="w-full bg-secondary text-white font-black py-6 rounded-2xl text-2xl hover:bg-amber-600 transition shadow-2xl transform hover:-translate-y-1 text-center">무료 상담 및 제안서 받기</button>
             </form>
         </div>
     </section>
 
-    <footer class="bg-slate-900 text-slate-500 py-12 border-t border-slate-800">
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-500 py-20 border-t border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
-            <div class="flex flex-col md:flex-row justify-between gap-8">
-                <div><div class="flex items-center gap-2 mb-4 text-white"><i class="fa-solid fa-layer-group text-2xl text-slate-400"></i><span class="font-bold text-xl">NESTORIUM</span></div><p class="text-sm">스타트업 엑셀러레이터 & 전문직 마케팅 에이전시</p></div>
-                <div class="text-sm"><p class="mb-2"><i class="fa-solid fa-location-dot mr-2"></i> 서울특별시 강남구 역삼동</p><p class="mb-2"><i class="fa-solid fa-envelope mr-2"></i> kwwhale1204@gmail.com</p><p><i class="fa-solid fa-phone mr-2"></i> 010-4747-9647</p></div>
+            <div class="flex flex-col lg:flex-row justify-between gap-12 text-left">
+                <div class="text-left">
+                    <div class="flex items-center gap-3 mb-6 text-white text-left text-left"><i class="fa-solid fa-layer-group text-3xl text-slate-400"></i><span class="font-black text-2xl tracking-tighter text-left">NESTORIUM</span></div>
+                    <p class="text-sm text-left leading-relaxed">스타트업 엑셀러레이터 & 전문직 마케팅 에이전시.<br>우리는 스타트업 생태계의 성장을 돕고, 전문가와 기업을 연결합니다.</p>
+                </div>
+                <div class="text-sm text-left space-y-3">
+                    <p class="font-bold text-slate-300 uppercase tracking-widest mb-4 text-left">Contact Info</p>
+                    <p class="text-left"><i class="fa-solid fa-location-dot mr-3 text-secondary"></i> 서울특별시 강남구 역삼동</p>
+                    <p class="text-left"><i class="fa-solid fa-envelope mr-3 text-secondary text-left"></i> kwwhale1204@gmail.com</p>
+                    <p class="text-left"><i class="fa-solid fa-phone mr-3 text-secondary text-left"></i> 010-4747-9647</p>
+                </div>
             </div>
-            <div class="mt-8 text-center text-xs border-t border-slate-800 pt-8">&copy; 2025 NESTORIUM Inc. All rights reserved.</div>
+            <div class="mt-20 text-center text-xs border-t border-slate-800 pt-10 text-center">&copy; 2025 NESTORIUM Inc. All rights reserved.</div>
         </div>
     </footer>
 
@@ -356,9 +414,31 @@
         const btn = document.getElementById('mobile-menu-btn');
         const menu = document.getElementById('mobile-menu');
         if (btn && menu) { btn.addEventListener('click', () => menu.classList.toggle('hidden')); }
+        
         const form = document.getElementById("contact-form");
+        const iframe = document.getElementById("hidden_iframe");
         const submitBtn = document.getElementById("submit-btn");
-        if (form) { form.addEventListener("submit", () => { submitBtn.innerText = "전송 중..."; submitBtn.disabled = true; }); }
+        let isSubmitting = false;
+
+        if (form) {
+            form.addEventListener("submit", () => {
+                isSubmitting = true;
+                submitBtn.innerText = "전송 중입니다...";
+                submitBtn.disabled = true;
+            });
+        }
+
+        if (iframe) {
+            iframe.onload = () => {
+                if (isSubmitting) {
+                    alert("문의가 정상적으로 접수되었습니다.\n담당자가 확인 후 빠르게 연락드리겠습니다.");
+                    form.reset();
+                    submitBtn.innerText = "무료 상담 및 제안서 받기";
+                    submitBtn.disabled = false;
+                    isSubmitting = false;
+                }
+            };
+        }
     </script>
 </body>
 </html>
