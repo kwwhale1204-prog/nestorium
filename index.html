@@ -59,6 +59,18 @@
 </head>
 <body class="font-sans text-slate-800 bg-white antialiased">
 
+    <!-- Success Modal (Replaces alert) -->
+    <div id="success-modal" class="hidden fixed inset-0 z-[60] flex items-center justify-center bg-black/50 backdrop-blur-sm px-4">
+        <div class="bg-white rounded-2xl p-8 max-w-sm w-full text-center shadow-2xl transform scale-100 transition-transform">
+            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <i class="fa-solid fa-check text-2xl text-green-600"></i>
+            </div>
+            <h3 class="text-2xl font-black text-slate-800 mb-2">접수 완료!</h3>
+            <p class="text-slate-600 mb-6">문의가 정상적으로 접수되었습니다.<br>담당자가 확인 후 빠르게 연락드리겠습니다.</p>
+            <button onclick="closeModal()" class="w-full bg-primary text-white font-bold py-3 rounded-xl hover:bg-slate-800 transition">확인</button>
+        </div>
+    </div>
+
     <!-- Navigation -->
     <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -224,6 +236,57 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Feature 3 (New) -->
+                <div class="flex flex-col lg:flex-row items-center gap-16">
+                    <div class="lg:w-1/2 order-2 lg:order-1 text-left">
+                        <div class="bg-slate-800 p-10 rounded-[2rem] border border-slate-700 shadow-2xl">
+                            <div class="flex items-center gap-6 mb-8 text-left">
+                                <div class="w-14 h-14 bg-secondary rounded-2xl flex items-center justify-center text-2xl font-black text-white">03</div>
+                                <h3 class="text-3xl font-black text-left">고품격 전문가<br>인터뷰 영상 & 숏폼</h3>
+                            </div>
+                            <p class="text-slate-300 text-lg mb-8 leading-relaxed text-left">
+                                글보다 영상이 신뢰를 주는 시대입니다. 전문 스튜디오에서 촬영된 <strong>인터뷰 영상과 트렌디한 숏폼 콘텐츠</strong>를 통해 전문가님의 매력과 전문성을 잠재 고객에게 각인시킵니다.
+                            </p>
+                            <ul class="space-y-4 text-slate-400 text-left">
+                                <li class="flex items-center gap-3"><i class="fa-solid fa-check-circle text-secondary text-xl"></i> 전문 PD 및 작가 배정</li>
+                                <li class="flex items-center gap-3"><i class="fa-solid fa-check-circle text-secondary text-xl"></i> 유튜브 및 인스타그램 릴스 최적화</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2 order-1 lg:order-2">
+                        <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-white/10 aspect-video">
+                            <!--  -->
+                            <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" alt="영상 촬영 스튜디오 샘플" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 4 (New) -->
+                <div class="flex flex-col lg:flex-row items-center gap-16">
+                    <div class="lg:w-1/2">
+                        <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-white/10 aspect-video">
+                            <!--  -->
+                            <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" alt="비즈니스 네트워킹 파티 샘플" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2 text-left">
+                        <div class="bg-slate-800 p-10 rounded-[2rem] border border-slate-700 shadow-2xl text-white">
+                            <div class="flex items-center gap-6 mb-8 text-left">
+                                <div class="w-14 h-14 bg-secondary rounded-2xl flex items-center justify-center text-2xl font-black text-white">04</div>
+                                <h3 class="text-3xl font-black text-left">VC & 스타트업<br>프라이빗 네트워킹</h3>
+                            </div>
+                            <p class="text-slate-300 text-lg mb-8 leading-relaxed text-left">
+                                단순한 리드 제공을 넘어, <strong>투자사(VC) 심사역과 고성장 스타트업 CEO들이 모이는 프라이빗 데이</strong>에 초대합니다. 업계 핵심 관계자들과의 밀도 높은 네트워킹으로 영향력을 확장하세요.
+                            </p>
+                            <div class="bg-black/20 p-6 rounded-2xl backdrop-blur-sm border border-white/10 text-left">
+                                <p class="font-bold flex items-center gap-2 text-white text-lg mb-2 text-left"><i class="fa-solid fa-crown text-yellow-400"></i> Premium 멤버십 전용 혜택</p>
+                                <p class="text-sm opacity-90 leading-relaxed text-left">분기별 IR 데이 및 VIP 네트워킹 파티 초청권 제공</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -249,10 +312,121 @@
                             <div class="w-3.5 h-3.5 rounded-full bg-red-500"></div><div class="w-3.5 h-3.5 rounded-full bg-yellow-500"></div><div class="w-3.5 h-3.5 rounded-full bg-green-500"></div>
                             <div class="ml-4 bg-slate-700 rounded-full text-xs text-slate-400 px-4 py-1.5 flex-1 text-center font-mono">nestorium-experts.vercel.app</div>
                         </div>
-                        <div class="aspect-[16/11] bg-slate-100 relative group cursor-pointer" onclick="window.open('https://nestorium-experts.vercel.app/', '_blank')">
-                            <!--  -->
-                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" alt="플랫폼 캡처 샘플" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                            <div class="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                        <div class="aspect-[16/11] bg-slate-50 relative group cursor-pointer overflow-hidden" onclick="window.open('https://nestorium-experts.vercel.app/', '_blank')">
+                            
+                            <!-- 목업 UI 시작: 스타트업 고객용 화면 구성 -->
+                            <div class="w-full h-full flex flex-col group-hover:scale-105 transition duration-500 origin-top">
+                                <!-- Top Nav -->
+                                <div class="bg-white border-b border-slate-100 px-6 py-4 flex justify-between items-center shadow-sm z-10">
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-white text-xs font-black"><i class="fa-solid fa-layer-group"></i></div>
+                                        <div class="font-black text-slate-800 text-sm">NESTORIUM</div>
+                                    </div>
+                                    <div class="flex gap-4 text-[10px] font-bold text-slate-400">
+                                        <span class="text-secondary">전문가 찾기</span>
+                                        <span>세미나 일정</span>
+                                        <span>마이페이지</span>
+                                    </div>
+                                </div>
+
+                                <!-- Main Content Area -->
+                                <div class="flex-1 p-6 overflow-hidden flex flex-col gap-6 bg-slate-50/50">
+                                    
+                                    <!-- Section 1: 세미나/교육 배너 -->
+                                    <div class="w-full bg-slate-800 rounded-2xl p-5 text-white relative overflow-hidden shadow-lg shrink-0">
+                                        <div class="absolute right-0 top-0 w-32 h-32 bg-secondary/30 rounded-full blur-2xl -mr-6 -mt-6"></div>
+                                        <div class="relative z-10">
+                                            <div class="inline-block bg-secondary text-[10px] font-bold px-2 py-0.5 rounded-full mb-2">모집중</div>
+                                            <h4 class="font-bold text-lg mb-1">스타트업 투자 유치 전략 세미나</h4>
+                                            <p class="text-xs text-slate-300 mb-3">초기 창업자를 위한 IR 덱 작성법 및 법률 가이드</p>
+                                            <div class="flex -space-x-2">
+                                                <div class="w-6 h-6 rounded-full bg-slate-400 border-2 border-slate-800"></div>
+                                                <div class="w-6 h-6 rounded-full bg-slate-300 border-2 border-slate-800"></div>
+                                                <div class="w-6 h-6 rounded-full bg-slate-200 border-2 border-slate-800 flex items-center justify-center text-[8px] text-slate-600 font-bold">+42</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Section 2: 전문가 리스트 -->
+                                    <div class="flex-1">
+                                        <div class="flex justify-between items-end mb-3">
+                                            <h5 class="font-bold text-slate-800">검증된 파트너 전문가</h5>
+                                            <span class="text-[10px] text-slate-400">전체보기 <i class="fa-solid fa-chevron-right text-[8px]"></i></span>
+                                        </div>
+                                        <div class="grid grid-cols-3 gap-3">
+                                            <!-- Expert Card 1 -->
+                                            <div class="bg-white p-3 rounded-xl border border-slate-100 shadow-sm hover:border-secondary/30 transition">
+                                                <div class="w-10 h-10 rounded-full bg-slate-100 mb-2 overflow-hidden mx-auto">
+                                                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" class="w-full h-full object-cover opacity-80">
+                                                </div>
+                                                <div class="text-center">
+                                                    <div class="text-[10px] text-secondary font-bold mb-0.5">변호사</div>
+                                                    <div class="font-bold text-xs text-slate-800 mb-1">김정훈</div>
+                                                    <div class="text-[8px] text-slate-400 bg-slate-50 rounded px-1 py-0.5">스타트업 법무</div>
+                                                </div>
+                                            </div>
+                                            <!-- Expert Card 2 -->
+                                            <div class="bg-white p-3 rounded-xl border border-slate-100 shadow-sm hover:border-secondary/30 transition">
+                                                <div class="w-10 h-10 rounded-full bg-slate-100 mb-2 overflow-hidden mx-auto">
+                                                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" class="w-full h-full object-cover opacity-80">
+                                                </div>
+                                                <div class="text-center">
+                                                    <div class="text-[10px] text-blue-500 font-bold mb-0.5">세무사</div>
+                                                    <div class="font-bold text-xs text-slate-800 mb-1">이서영</div>
+                                                    <div class="text-[8px] text-slate-400 bg-slate-50 rounded px-1 py-0.5">법인 기장</div>
+                                                </div>
+                                            </div>
+                                            <!-- Expert Card 3 -->
+                                            <div class="bg-white p-3 rounded-xl border border-slate-100 shadow-sm hover:border-secondary/30 transition">
+                                                <div class="w-10 h-10 rounded-full bg-slate-100 mb-2 overflow-hidden mx-auto">
+                                                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" class="w-full h-full object-cover opacity-80">
+                                                </div>
+                                                <div class="text-center">
+                                                    <div class="text-[10px] text-green-600 font-bold mb-0.5">변리사</div>
+                                                    <div class="font-bold text-xs text-slate-800 mb-1">박준형</div>
+                                                    <div class="text-[8px] text-slate-400 bg-slate-50 rounded px-1 py-0.5">특허 출원</div>
+                                                </div>
+                                            </div>
+                                             <!-- Expert Card 4 -->
+                                             <div class="bg-white p-3 rounded-xl border border-slate-100 shadow-sm hover:border-secondary/30 transition">
+                                                <div class="w-10 h-10 rounded-full bg-slate-100 mb-2 overflow-hidden mx-auto">
+                                                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" class="w-full h-full object-cover opacity-80">
+                                                </div>
+                                                <div class="text-center">
+                                                    <div class="text-[10px] text-purple-500 font-bold mb-0.5">노무사</div>
+                                                    <div class="font-bold text-xs text-slate-800 mb-1">최민수</div>
+                                                    <div class="text-[8px] text-slate-400 bg-slate-50 rounded px-1 py-0.5">급여 관리</div>
+                                                </div>
+                                            </div>
+                                             <!-- Expert Card 5 -->
+                                             <div class="bg-white p-3 rounded-xl border border-slate-100 shadow-sm hover:border-secondary/30 transition">
+                                                <div class="w-10 h-10 rounded-full bg-slate-100 mb-2 overflow-hidden mx-auto">
+                                                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" class="w-full h-full object-cover opacity-80">
+                                                </div>
+                                                <div class="text-center">
+                                                    <div class="text-[10px] text-orange-500 font-bold mb-0.5">법무사</div>
+                                                    <div class="font-bold text-xs text-slate-800 mb-1">정다은</div>
+                                                    <div class="text-[8px] text-slate-400 bg-slate-50 rounded px-1 py-0.5">법인 설립</div>
+                                                </div>
+                                            </div>
+                                             <!-- Expert Card 6 -->
+                                             <div class="bg-white p-3 rounded-xl border border-slate-100 shadow-sm hover:border-secondary/30 transition">
+                                                <div class="w-10 h-10 rounded-full bg-slate-100 mb-2 overflow-hidden mx-auto">
+                                                    <div class="w-full h-full bg-slate-200 flex items-center justify-center text-slate-400 text-[8px]">+More</div>
+                                                </div>
+                                                <div class="text-center">
+                                                    <div class="text-[10px] text-slate-400 font-bold mb-0.5">더보기</div>
+                                                    <div class="font-bold text-xs text-slate-800 mb-1">전문가 찾기</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- 목업 UI 끝 -->
+
+                            <div class="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center z-20">
                                 <span class="bg-white text-primary px-8 py-3 rounded-full font-black text-xl shadow-2xl">사이트 방문하기</span>
                             </div>
                         </div>
@@ -274,26 +448,34 @@
                     <h3 class="text-2xl font-bold text-slate-400 mb-2">Basic</h3>
                     <div class="text-5xl font-black text-primary mb-8">100<span class="text-xl font-medium text-slate-400">만원/월</span></div>
                     <p class="text-slate-500 mb-10 border-b pb-10 min-h-[80px]">"기초 브랜딩과 지역 키워드 장악이 필요한 분들을 위한 실속형"</p>
-                    <ul class="space-y-5 mb-12 flex-1">
-                        <li class="flex items-center gap-3 font-medium"><i class="fa-solid fa-circle-check text-green-500 text-xl"></i> 브랜드 블로그 월 30건</li>
-                        <li class="flex items-center gap-3 font-medium"><i class="fa-solid fa-circle-check text-green-500 text-xl"></i> 상위노출 키워드 관리</li>
-                        <li class="flex items-center gap-3 text-slate-300"><i class="fa-solid fa-circle-xmark text-xl"></i> 세미나 호스트권 미포함</li>
+                    <ul class="space-y-4 mb-12 flex-1 text-sm md:text-base">
+                        <li class="flex items-center gap-3 font-medium"><i class="fa-solid fa-circle-check text-green-500 text-lg"></i> 브랜드 블로그 월 30건</li>
+                        <li class="flex items-center gap-3 font-medium"><i class="fa-solid fa-circle-check text-green-500 text-lg"></i> 블로그 일반 배포 월 50건</li>
+                        <li class="flex items-center gap-3 font-medium"><i class="fa-solid fa-circle-check text-green-500 text-lg"></i> 상위노출 키워드 관리</li>
+                        <li class="flex items-center gap-3 text-slate-300"><i class="fa-solid fa-circle-xmark text-lg"></i> 전문가 브랜딩 영상 미포함</li>
+                        <li class="flex items-center gap-3 text-slate-300"><i class="fa-solid fa-circle-xmark text-lg"></i> 세미나 패널 참여 미포함</li>
+                        <li class="flex items-center gap-3 text-slate-300"><i class="fa-solid fa-circle-xmark text-lg"></i> 세미나 호스트 & DB 미포함</li>
                     </ul>
                     <a href="#contact" class="block w-full py-4 px-6 text-center rounded-2xl border-2 border-primary text-primary font-black hover:bg-primary hover:text-white transition">문의하기</a>
                 </div>
+                
                 <!-- Standard -->
                 <div class="bg-white rounded-[2.5rem] shadow-xl p-10 border-4 border-blue-500/10 flex flex-col hover:-translate-y-3 transition duration-500 text-left relative overflow-hidden">
                     <div class="absolute top-0 right-0 bg-blue-500 text-white text-xs font-black px-5 py-2 rounded-bl-2xl">POPULAR</div>
                     <h3 class="text-2xl font-bold text-blue-600 mb-2">Standard</h3>
                     <div class="text-5xl font-black text-primary mb-8">200<span class="text-xl font-medium text-slate-400">만원/월</span></div>
                     <p class="text-slate-500 mb-10 border-b pb-10 min-h-[80px]">"영상 마케팅과 세미나 참여를 통해 전문성을 입증하는 확장형"</p>
-                    <ul class="space-y-5 mb-12 flex-1">
-                        <li class="flex items-center gap-3 font-medium"><i class="fa-solid fa-circle-check text-blue-500 text-xl"></i> 브랜드 블로그 월 30건</li>
-                        <li class="flex items-center gap-3 font-medium"><i class="fa-solid fa-circle-check text-blue-500 text-xl"></i> 전문가 브랜딩 영상 촬영</li>
-                        <li class="flex items-center gap-3 font-medium"><i class="fa-solid fa-circle-check text-blue-500 text-xl"></i> 세미나 패널 참여 권한</li>
+                    <ul class="space-y-4 mb-12 flex-1 text-sm md:text-base">
+                        <li class="flex items-center gap-3 font-medium"><i class="fa-solid fa-circle-check text-blue-500 text-lg"></i> 브랜드 블로그 월 30건</li>
+                        <li class="flex items-center gap-3 font-medium"><i class="fa-solid fa-circle-check text-blue-500 text-lg"></i> 블로그 일반 배포 월 100건</li>
+                        <li class="flex items-center gap-3 font-medium"><i class="fa-solid fa-circle-check text-blue-500 text-lg"></i> 전문가 브랜딩 영상 촬영</li>
+                        <li class="flex items-center gap-3 font-medium"><i class="fa-solid fa-circle-check text-blue-500 text-lg"></i> 세미나 패널 참여 권한</li>
+                        <li class="flex items-center gap-3 text-slate-300"><i class="fa-solid fa-circle-xmark text-lg"></i> 세미나 호스트 & DB 미포함</li>
+                        <li class="flex items-center gap-3 text-slate-300"><i class="fa-solid fa-circle-xmark text-lg"></i> 숏폼 영상 제작 미포함</li>
                     </ul>
                     <a href="#contact" class="block w-full py-4 px-6 text-center rounded-2xl bg-primary text-white font-black hover:bg-slate-800 transition shadow-lg">신청하기</a>
                 </div>
+                
                 <!-- Premium -->
                 <div class="bg-white rounded-[2.5rem] shadow-2xl p-10 border-4 border-secondary flex flex-col transform md:-translate-y-6 hover:-translate-y-10 transition duration-500 text-left relative">
                     <div class="absolute top-0 right-0 bg-secondary text-white text-xs font-black px-5 py-2 rounded-bl-2xl">ROI 200%+</div>
@@ -301,10 +483,16 @@
                     <div class="text-5xl font-black text-primary mb-2">250<span class="text-xl font-medium text-slate-400">만원/월</span></div>
                     <div class="text-xs font-black text-amber-600 mb-6 flex items-center gap-2"><i class="fa-solid fa-fire text-lg"></i> DB 가치 320만 원 독점 포함</div>
                     <p class="text-slate-500 mb-10 border-b pb-10 min-h-[80px]">"세미나 메인 호스트로서 잠재 고객 DB를 독점하고 수임을 확정 짓는 플랜"</p>
-                    <ul class="space-y-5 mb-12 flex-1">
-                        <li class="flex items-center gap-3 font-black text-primary"><i class="fa-solid fa-crown text-secondary text-xl"></i> 세미나 메인 호스트 보장</li>
-                        <li class="flex items-center gap-3 font-black text-primary"><i class="fa-solid fa-database text-secondary text-xl"></i> 참석자 40인 실명 DB 독점</li>
-                        <li class="flex items-center gap-3 font-black text-primary"><i class="fa-solid fa-video text-secondary text-xl"></i> 숏폼 영상 8건 제작 지원</li>
+                    <ul class="space-y-4 mb-12 flex-1 text-sm md:text-base">
+                        <!-- Included from Lower Tiers (Changed from grey to orange checkmarks) -->
+                        <li class="flex items-center gap-3 font-medium text-slate-600"><i class="fa-solid fa-circle-check text-secondary text-lg"></i> 브랜드 블로그 월 30건</li>
+                        <li class="flex items-center gap-3 font-medium text-slate-600"><i class="fa-solid fa-circle-check text-secondary text-lg"></i> 블로그 일반 배포 월 100건</li>
+                        <li class="flex items-center gap-3 font-medium text-slate-600"><i class="fa-solid fa-circle-check text-secondary text-lg"></i> 전문가 브랜딩 영상 촬영</li>
+                        <li class="flex items-center gap-3 font-medium text-slate-600"><i class="fa-solid fa-circle-check text-secondary text-lg"></i> 세미나 패널 참여 권한</li>
+                        <!-- Premium Exclusives -->
+                        <li class="flex items-center gap-3 font-black text-primary"><i class="fa-solid fa-crown text-secondary text-lg"></i> 세미나 메인 호스트 보장</li>
+                        <li class="flex items-center gap-3 font-black text-primary"><i class="fa-solid fa-database text-secondary text-lg"></i> 참석자 40인 실명 DB 독점</li>
+                        <li class="flex items-center gap-3 font-black text-primary"><i class="fa-solid fa-video text-secondary text-lg"></i> 숏폼 영상 8건 제작 지원</li>
                     </ul>
                     <a href="#contact" class="block w-full py-5 px-6 text-center rounded-2xl bg-secondary text-white font-black text-xl hover:bg-amber-600 transition shadow-2xl">Premium 파트너 신청</a>
                 </div>
@@ -353,19 +541,14 @@
     <section id="seminar" class="py-32 bg-white border-t border-slate-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-start gap-16">
             <div class="lg:w-1/2 space-y-10">
-                <!-- 실제 패널 토크 현장 사진 -->
-                <div class="rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-slate-50 h-80">
-                   <!--  -->
-                   <img src="https://images.unsplash.com/photo-1540575861501-7ad060e39fe1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" alt="세미나 패널토크 샘플" class="w-full h-full object-cover">
-                </div>
                 <!-- 실제 세미나 영상 -->
                 <div class="rounded-[2.5rem] overflow-hidden shadow-2xl bg-black border-4 border-slate-100">
-                   <div class="video-container">
-                       <!-- [Video of 세미나 영상: KakaoTalk_20260104_203715917.mp4] -->
-                       <video controls playsinline poster="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80">
-                           <source src="KakaoTalk_20260104_203715917.mp4" type="video/mp4">
-                       </video>
-                   </div>
+                    <div class="video-container">
+                        <!-- Video Placeholder replaced with working generic stock footage -->
+                        <video controls playsinline poster="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80">
+                            <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4">
+                        </video>
+                    </div>
                 </div>
             </div>
             <div class="lg:w-1/2 text-left sticky top-32">
@@ -465,14 +648,29 @@
     </footer>
 
     <script>
+        // Mobile Menu Toggle
         const btn = document.getElementById('mobile-menu-btn');
         const menu = document.getElementById('mobile-menu');
         if (btn && menu) { btn.addEventListener('click', () => menu.classList.toggle('hidden')); }
         
+        // Contact Form Handling
         const form = document.getElementById("contact-form");
         const iframe = document.getElementById("hidden_iframe");
         const submitBtn = document.getElementById("submit-btn");
+        const modal = document.getElementById("success-modal");
         let isSubmitting = false;
+
+        function showModal() {
+            modal.classList.remove('hidden');
+        }
+
+        function closeModal() {
+            modal.classList.add('hidden');
+            // Reset form after closing modal
+            form.reset();
+            submitBtn.innerText = "무료 상담 및 제안서 받기";
+            submitBtn.disabled = false;
+        }
 
         if (form) {
             form.addEventListener("submit", () => {
@@ -485,10 +683,7 @@
         if (iframe) {
             iframe.onload = () => {
                 if (isSubmitting) {
-                    alert("문의가 정상적으로 접수되었습니다.\n담당자가 확인 후 빠르게 연락드리겠습니다.");
-                    form.reset();
-                    submitBtn.innerText = "무료 상담 및 제안서 받기";
-                    submitBtn.disabled = false;
+                    showModal();
                     isSubmitting = false;
                 }
             };
