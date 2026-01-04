@@ -59,7 +59,7 @@
 </head>
 <body class="font-sans text-slate-800 bg-white antialiased">
 
-    <!-- Success Modal (Replaces alert) -->
+    <!-- Success Modal -->
     <div id="success-modal" class="hidden fixed inset-0 z-[60] flex items-center justify-center bg-black/50 backdrop-blur-sm px-4">
         <div class="bg-white rounded-2xl p-8 max-w-sm w-full text-center shadow-2xl transform scale-100 transition-transform">
             <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -653,7 +653,7 @@
         const menu = document.getElementById('mobile-menu');
         if (btn && menu) { btn.addEventListener('click', () => menu.classList.toggle('hidden')); }
         
-        // Contact Form Handling
+        // Contact Form Handling (Reverted to hidden iframe for reliability)
         const form = document.getElementById("contact-form");
         const iframe = document.getElementById("hidden_iframe");
         const submitBtn = document.getElementById("submit-btn");
