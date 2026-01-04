@@ -500,43 +500,6 @@
         </div>
     </section>
 
-    <!-- ROI Info Summary -->
-    <section class="py-24 bg-primary text-white relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col lg:flex-row items-center justify-between gap-16">
-                <div class="lg:w-1/2 text-left">
-                    <h2 class="text-3xl md:text-5xl font-black mb-8 leading-tight">결제하시는 금액보다<br><span class="text-secondary text-4xl md:text-6xl">더 많은 가치</span>를 돌려드립니다.</h2>
-                    <p class="text-slate-400 text-xl leading-relaxed break-keep">
-                        시중의 유효한 법인 고객 리드(Lead) 확보 비용은 건당 약 8만 원입니다.<br><br>
-                        네스토리움은 매달 평균 40명의 유효 대표님들을 세미나에 모객하며, 프리미엄 파트너는 이분들의 **실명, 연락처, 고민 사항이 담긴 DB**를 즉시 넘겨받습니다. 데이터 가치로만 이미 320만 원입니다.
-                    </p>
-                </div>
-                <div class="lg:w-1/2 flex justify-center">
-                    <div class="bg-white/10 p-10 rounded-[3rem] border-2 border-white/20 backdrop-blur-xl w-full max-w-md shadow-2xl">
-                        <div class="space-y-8">
-                            <div class="flex justify-between items-center text-left">
-                                <span class="text-slate-400 text-lg font-bold">참석자 40명 DB 가치</span>
-                                <span class="font-black text-2xl text-white">320만 원</span>
-                            </div>
-                            <div class="flex justify-between items-center text-left">
-                                <span class="text-slate-400 text-lg font-bold">마케팅 실행 가치</span>
-                                <span class="font-black text-2xl text-white">200만 원</span>
-                            </div>
-                            <div class="w-full h-px bg-white/20"></div>
-                            <div class="flex justify-between items-center text-secondary text-left">
-                                <span class="font-black text-xl uppercase tracking-tighter">Total Value</span>
-                                <span class="font-black text-5xl">520만 원+</span>
-                            </div>
-                            <div class="bg-secondary/20 border border-secondary text-secondary text-center py-4 rounded-2xl font-black text-lg">
-                                멤버십 가격: 월 250만 원
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Seminar Section -->
     <section id="seminar" class="py-32 bg-white border-t border-slate-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-start gap-16">
@@ -545,7 +508,7 @@
                 <div class="rounded-[2.5rem] overflow-hidden shadow-2xl bg-black border-4 border-slate-100">
                     <div class="video-container">
                         <!-- Video Placeholder replaced with working generic stock footage -->
-                        <video controls playsinline poster="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80">
+                        <video controls playsinline poster="[https://images.unsplash.com/photo-1475721027785-f74eccf877e2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80](https://images.unsplash.com/photo-1475721027785-f74eccf877e2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80)">
                             <source src="B2B_마케팅_엔진_해부__성공_사례_분석.mp4" type="video/mp4">
                         </video>
                     </div>
@@ -578,7 +541,7 @@
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-3xl md:text-5xl font-black mb-16 text-center leading-tight">미래 유니콘 기업의<br><span class="text-secondary text-shadow">공식 파트너</span>가 되세요.</h2>
             <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
-            <form id="contact-form" action="https://docs.google.com/forms/d/e/1FAIpQLSeib1mRigVAKUapGnSQvPQTIpuAdAmbzr2c_HOKHYvtRW1EAw/formResponse" method="POST" target="hidden_iframe" class="bg-white rounded-[3rem] p-10 md:p-16 shadow-2xl text-left max-w-2xl mx-auto text-slate-800">
+            <form id="contact-form" action="[https://docs.google.com/forms/d/e/1FAIpQLSeib1mRigVAKUapGnSQvPQTIpuAdAmbzr2c_HOKHYvtRW1EAw/formResponse](https://docs.google.com/forms/d/e/1FAIpQLSeib1mRigVAKUapGnSQvPQTIpuAdAmbzr2c_HOKHYvtRW1EAw/formResponse)" method="POST" target="hidden_iframe" class="bg-white rounded-[3rem] p-10 md:p-16 shadow-2xl text-left max-w-2xl mx-auto text-slate-800">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8 text-left">
                     <div>
                         <label class="block text-slate-700 font-black mb-3">전문분야</label>
@@ -653,7 +616,7 @@
         const menu = document.getElementById('mobile-menu');
         if (btn && menu) { btn.addEventListener('click', () => menu.classList.toggle('hidden')); }
         
-        // Contact Form Handling (Reverted to hidden iframe for reliability)
+        // Contact Form Handling (Using hidden iframe + timeout fallback)
         const form = document.getElementById("contact-form");
         const iframe = document.getElementById("hidden_iframe");
         const submitBtn = document.getElementById("submit-btn");
@@ -670,6 +633,7 @@
             form.reset();
             submitBtn.innerText = "무료 상담 및 제안서 받기";
             submitBtn.disabled = false;
+            isSubmitting = false; // Reset state
         }
 
         if (form) {
@@ -677,6 +641,15 @@
                 isSubmitting = true;
                 submitBtn.innerText = "전송 중입니다...";
                 submitBtn.disabled = true;
+
+                // Fallback: Google Forms often blocks iframe access, preventing onload from firing reliably.
+                // We use a timeout to show success message assuming submission went through.
+                setTimeout(() => {
+                    if (isSubmitting) {
+                        showModal();
+                        isSubmitting = false;
+                    }
+                }, 1500); 
             });
         }
 
